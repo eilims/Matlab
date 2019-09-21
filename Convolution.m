@@ -2,11 +2,10 @@
 % script.
 
 for q = 1:10000:100000
-
     x = 0:q;
 
     y1 = x;
-    y2 = -x + w;
+    y2 = -x + q;
 
     fprintf('Running test for %d samples\n', q);
     
@@ -18,7 +17,7 @@ for q = 1:10000:100000
 
     %plot(x,y1,x,y2)
     %figure
-    %plot(1:2*w+1, y3)
+    %plot(1:2*q+1, y3)
 
     y4 = zeros(1, size(y1,2) + size(y2,2) - 1);
 
@@ -35,7 +34,7 @@ for q = 1:10000:100000
     toc
     
     %figure
-    %plot(1:2*w+1, y4)
+    %plot(1:2*q+1, y4)
     fprintf('\n')
 end
 
